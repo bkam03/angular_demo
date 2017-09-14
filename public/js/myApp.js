@@ -10,7 +10,8 @@ angular.module('myApp')
 //bootstrapping process.
     .config(function(){
         // config
-    })
-    .run(function(){
+    }) //rootScope is visible to all scopes
+    .run( [ 'APP_VERSION', '$rootScope', function( APP_VERSION, $rootScope ){
         // initialize
-    });
+        $rootScope.version = APP_VERSION;
+    } ] );
