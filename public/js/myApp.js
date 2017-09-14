@@ -6,6 +6,13 @@ angular.module('myApp', []);
 //retrieve created module from angular.
 var myApp = angular.module('myApp');
 //bootstrapping process.
+
+
+//name controller, define dependencies in array.
+myApp.controller( 'MyController', [ '$scope', function( $scope ) {
+  $scope.myFirstName = 'Brandon';
+} ] );
+
 myApp
     .config(function(){
         // config
