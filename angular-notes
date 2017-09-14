@@ -1,0 +1,63 @@
+mvc model, database   view-seen by client   controller-interface between the two.
+react is a library, angular is framework.
+anular is good when you have a lot of logic, or a lot of people working on it.
+
+react is just view.  angular has more structure behind it.
+mvc for react would be redux-react-something else.
+
+angularjs is below v2. angular is <v2.
+
+can do unit and end to end testing( protractor ).
+
+
+singleton is an object with only one instance.
+
+MODEL
+model is a singleton defined by service.  all data is in one place like redux store.
+put business logic in backend, service.
+
+VIEW
+like handlebars.  should be mainly HTML.
+every view has a controller.
+
+CONTROLLER
+there may be more controllers than views.
+layer between view and model, should be as thin as possible.
+no business logic
+there should be no presentation or DOM concern.
+this would be like the express route part with res.render( view, object );
+
+backend just handles data, front end does all the rendering.
+like factory/warehouse => shipping => store.
+
+MODELS/CONTROLLERS
+when you change 'state' in one, the other sees it too.  either side can make changes.  like shared object.
+
+
+DEPENDENCY INJECTION
+you can specify a service and angular will fill it in at compile.  you dont have to connect the store.
+
+PROVIDERS
+Value- some value
+Constant - like const
+Factory/Service/Provider - singleton services.  basically, use service.
+provider creates factories who create services.  after v2, only services.
+
+DIRECTIVE- marker on DOM element.  if planning on heavily using angular, learn to create these.
+this is like react component.
+use <directive>. can also do directive, class="directive", <!--directive-->
+
+$$$$$$$$$$$
+
+$compile.
+if has $, is straight from angular. dont touch it.
+
+$$$$$$$$$$$
+
+MODULES
+containers for app. separates parts of angular.  //harder than directives, called lazy loading.
+for now instead of selectively taking modules, use them to sort what you have and take everything.
+
+ROUTING
+define routes, attach controller and view to route.
+
