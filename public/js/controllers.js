@@ -6,8 +6,10 @@
 
 //do this so not on global scope
 angular.module('myApp')
-.controller( 'myController', [ '$scope', 'mainCharacter', function( $scope, mainCharacter ) {
+.controller( 'myController', [ '$scope', 'mainCharacter', 'CharacterVersionFactory', function( $scope, mainCharacter, CharacterVersionFactory ) {
   $scope.myFirstName = 'Brandon';
   $scope.myModel= 'Ready Player One';
   $scope.mainCharacter = mainCharacter;
+  $scope.charVer =
+    CharacterVersionFactory.genCharVersion();
 } ] );
