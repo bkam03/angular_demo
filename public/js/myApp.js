@@ -9,7 +9,7 @@ var myApp = angular.module('myApp');
 
 
 //name controller, define dependencies in array.
-myApp.controller( 'MyController', [ '$scope', function( $scope ) {
+myApp.controller( 'myController', [ '$scope', function( $scope ) {
   $scope.myFirstName = 'Brandon';
 } ] );
 

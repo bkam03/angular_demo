@@ -1,0 +1,58 @@
+STATIC SERVER
+Create a package json file
+install the express module
+create a server.js file
+setup express static middleware
+to serve static files from public/
+tag as step1_server
+
+
+ANGULAR APP
+Make a new angular_tutorial git project
+create a public/ directory
+add html5 markup to index.html
+import angular from cdnjs
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"
+  type="text/javascript"></script>
+start the server with nodemon
+test
+commit
+tag as step2_html5
+
+
+TEMPLATING
+display js expression on page
+Set the body tag as the app container using the ng-app directive
+Concatenate a string in h1: "Hello"+"Angular!"
+Add 2 + 3 in a div
+test
+commit
+tag as step3_templating
+
+<body ng-app="myApp">
+  <h1>{{'Hello' + 'Angular'}}</h1>
+  <div>{{2+3}}</div>
+
+  <input type="text" ng-model="myModel">
+
+
+TWO WAY DATA BINDING
+ng-model directive declares a model.
+  <div>{{ myModel }}</div>
+
+MODULES
+import js file, create new angular module, set body tag as module container.
+Set the value of the ng-app directive to "myApp"
+Create "js/myApp.js" and import the source file
+commit
+tag as step5_angular_module
+
+CONTROLLER
+Declare myController in myApp.js
+Inject the $scope dependency
+Attach a new model named myFirstName to $scope with your name as the value
+Add a new div and set the ng-controller directive to myController
+test
+commit
+tag as step6_controller
