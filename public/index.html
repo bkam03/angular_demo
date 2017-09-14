@@ -28,8 +28,9 @@
       {{ charVer }}
     </div>
 
-    <div>
-      {{ books }}
+    <div ng-repeat="book in books">
+      <h4>{{ book.title }}</h4>
+      <p class="book_author">{{ book.author }}</p>
     </div>
 
   </div>
