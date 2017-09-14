@@ -1,4 +1,4 @@
-
+//try to keep things off global scope when possible
 
 // creation uses a 2nd array argument to import dependencies
 //pass in 2 args, create new module.  module called myApp.  array is list of dependencies to pass into module. must pass in second parameter or everything breaks.
