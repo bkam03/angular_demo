@@ -6,7 +6,7 @@
 
 //do this so not on global scope
 angular.module('myApp')
-.controller( 'myController', [ '$scope', 'mainCharacter', 'CharacterVersionFactory', 'BookService', function( $scope, mainCharacter, CharacterVersionFactory, BookService ) {
+.controller( 'myController', [ '$scope', 'mainCharacter', 'CharacterVersionFactory', 'BookService', 'Movies', function( $scope, mainCharacter, CharacterVersionFactory, BookService, Movies ) {
   $scope.myFirstName = 'Brandon';
   $scope.myModel= 'Ready Player One';
   $scope.mainCharacter = mainCharacter;
@@ -29,5 +29,7 @@ angular.module('myApp')
     $scope.tempBook.title = '';
     $scope.tempBook.author= '';
   };
+
+  $scope.movies = Movies.getMovies();
 
 }]);
