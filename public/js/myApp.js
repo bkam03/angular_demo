@@ -26,6 +26,9 @@ angular.module('myApp')
       .when( '/others', {
         templateUrl: 'others.html',
         controller: 'othersController'
+      } )
+      .otherwise( {
+        template: '<h1><center>nope</center></h1>'
       } );
 
       $locationProvider.html5Mode(true);
