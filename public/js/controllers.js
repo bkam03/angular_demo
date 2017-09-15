@@ -12,5 +12,22 @@ angular.module('myApp')
   $scope.mainCharacter = mainCharacter;
   $scope.charVer =
     CharacterVersionFactory.genCharVersion();
-  $scope.books = BookService.books;
-} ] );
+//  $scope.books = BookService.books;
+  $scope.BookService = BookService;
+
+  $scope.tempBook = {
+    title: '',
+    author: ''
+  };
+
+  $scope.add = function() {
+    let newBook = {
+      title: $scope.tempBook.title,
+      author: $scope.tempBook.author
+    };
+    BookService.addBook( newBook );
+    $scope.tempBook.title = '';
+    $scope.tempBook.author= '';
+  };
+
+}]);
