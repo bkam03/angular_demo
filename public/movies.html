@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+-----------------------filter 1990
+      <div ng-repeat="movie in movies | filter:1990">
+        <h4>{{ movie.title }}</h4>
+        <span>{{ movie.year }}</span>
+      </div>
+      <br />
+---------------------befor 2009, -year
+      <div ng-repeat="movie in movies | beforeYearFilter:2009 | orderBy: '-year'">
+        <h4>{{ movie.title }}</h4>
+        <span>{{ movie.year }}</span>
+      </div>
+      <br />
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+      {{ myFirstName }}
+
+      <input type="text" ng-model="myModel">
+
+      <div>{{ myModel }}</div>
+
+      <div>
+        {{ mainCharacter }}
+      </div>
+
+      <div>
+        {{ version }}
+      </div>
+
+      <div>
+        {{ charVer }}
+      </div>
+      <br />
+--------------------search book title, order by title
+      <input type="text" ng-model="searchBookTitle" placeholder="o">
+      <div ng-repeat="book in BookService.books | filter:searchBookTitle | orderBy:'title'">
+      <h4>{{ book.title }}</h4>
+      <span>{{ book.author }}</span>
+     </div>
+      <br />
+--------------------all books
+      <div ng></div>
+      <div ng-repeat="book in BookService.books">
+        <h4>{{ book.title }}</h4>
+        <p class="book_author">{{ book.author }}</p>
+      </div>
+      <br />
+---------------------add book
+      <br />
+
+      <input type="text" ng-model="tempBook.title">
+      <input type="text" ng-model="tempBook.author">
+      <button ng-click="add()">Add Book</button>
+      <br />
+-----------------------filter 1990
+      <div ng-repeat="movie in movies | filter:1990">
+        <h4>{{ movie.title }}</h4>
+        <span>{{ movie.year }}</span>
+      </div>
+      <br />
+---------------------befor 2009, -year
+      <div ng-repeat="movie in movies | beforeYearFilter:2009 | orderBy: '-year'">
+        <h4>{{ movie.title }}</h4>
+        <span>{{ movie.year }}</span>
+      </div>
+      <br />
+----------------------reverse cap
+      <br />
+      <input type="text"ng-model="filterString"> <br>
+      <div>
+        {{ filterString | uppercase:true }}
+      </div>
+      <br />
+    </div>
+</body>
+</html>
