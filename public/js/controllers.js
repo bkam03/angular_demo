@@ -30,6 +30,10 @@ angular.module('myApp')
     $scope.tempBook.author= '';
   };
 
-  $scope.movies = Movies.getMovies();
+  $scope.movies = [];
+  Movies.getMovies()
+  .then( ( movies ) => {
+    $scope.movies = movies;
+  });
 
 }]);
